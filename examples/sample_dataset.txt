@@ -1,0 +1,67 @@
+# Sample Test Dataset for NLP Service
+
+# This file contains example diary entries with expected outputs
+# Format: Input text | Expected category | Expected type | Expected time (if explicit)
+
+## Sport Examples
+Сходил в зал | спорт | activity | -
+Потренировался 90 минут | спорт | activity | 90
+Пожал сотку | спорт | achievement | -
+Впервые пробежал 10 км | спорт | achievement | -
+Делал кардио час | спорт | activity | 60
+Качался, делал жим | спорт | activity | -
+
+## Study Examples
+Читал книгу 2 часа | учёба | activity | 120
+Учил математику | учёба | activity | -
+Сделал домашку | учёба | activity | -
+Сдал экзамен на отлично | учёба | achievement | -
+Изучал Python 3 часа | учёба | activity | 180
+Прошёл курс по алгоритмам | учёба | achievement | -
+
+## Cooking Examples
+Приготовил курочку | готовка | activity | -
+Сварил борщ | готовка | activity | -
+Испёк пирог | готовка | activity | -
+Готовил 45 минут | готовка | activity | 45
+
+## Work Examples
+Работал над проектом | работа | activity | -
+Сделал фичу | работа | activity | -
+Пофиксил баги | работа | activity | -
+Созвон с командой | работа | activity | -
+Запустил в продакшн | работа | achievement | -
+
+## Creative Examples
+Рисовал картину | творчество | activity | -
+Играл на гитаре | творчество | activity | -
+Написал стих | творчество | activity | -
+Закончил картину | творчество | achievement | -
+
+## Self-development Examples
+Медитировал 30 минут | саморазвитие | activity | 30
+Планировал цели | саморазвитие | activity | -
+Вёл дневник | саморазвитие | activity | -
+
+## Social Examples
+Встретился с друзьями | социальное | activity | -
+Позвонил родителям | социальное | activity | -
+Сходил на свидание | социальное | activity | -
+
+## Household Examples
+Убрался дома | дом | activity | -
+Помыл посуду | дом | activity | -
+Постирал | дом | activity | -
+Сделал генеральную уборку | дом | activity | -
+
+## Multiple Actions Examples
+Сходил в зал, приготовил обед, почитал книгу | спорт, готовка, учёба | activity | -
+Читал 2 часа, сделал домашку, убрался | учёба, учёба, дом | activity | 120
+Впервые пробежал 10 км, потом растяжка | спорт, спорт | achievement, activity | -
+
+## Edge Cases
+Ничего не делал | - | - | -
+Отдыхал весь день | - | - | -
+Просто лежал | - | - | -
+Позвони мне на +7 999 123-45-67 | - | - | - (should redact PII)
+Написал на email@test.com про встречу | - | - | - (should redact PII)
