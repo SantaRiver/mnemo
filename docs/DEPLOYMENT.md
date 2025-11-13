@@ -19,6 +19,7 @@ LOG_LEVEL=INFO
 
 # OpenAI (optional but recommended)
 OPENAI_API_KEY=your_actual_api_key_here
+OPENAI_BASE_URL=https://api.artemox.com/v1
 OPENAI_MODEL=gpt-4-turbo-preview
 
 # Redis (required for production)

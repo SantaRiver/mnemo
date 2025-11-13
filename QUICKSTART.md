@@ -10,8 +10,9 @@ cd nlp_service
 # Copy environment file
 cp .env.example .env
 
-# Edit .env and add your OpenAI API key (optional)
+# Edit .env and add your OpenAI API key and custom base URL (optional)
 # OPENAI_API_KEY=your_key_here
+# OPENAI_BASE_URL=https://api.artemox.com/v1
 ```
 
 ## 2. Run with Docker (Recommended)
@@ -81,6 +82,7 @@ uvicorn nlp_service.api.main:app --reload
 
 **LLM not working?**
 - Add `OPENAI_API_KEY` to `.env`
+- Set custom API endpoint with `OPENAI_BASE_URL` if needed (e.g., `https://api.artemox.com/v1`)
 - Or use heuristics only: Set `USE_LLM_FALLBACK=false`
 
 ## Need Help?

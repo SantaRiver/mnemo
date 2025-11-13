@@ -233,6 +233,7 @@ pytest --cov=src/nlp_service --cov-report=html
 | Переменная | Описание | По умолчанию |
 |------------|----------|--------------|
 | `OPENAI_API_KEY` | API ключ OpenAI | - |
+| `OPENAI_BASE_URL` | Базовый URL для OpenAI API | https://api.openai.com/v1 |
 | `OPENAI_MODEL` | Модель OpenAI | gpt-4-turbo-preview |
 | `REDIS_URL` | URL подключения к Redis | redis://localhost:6379/0 |
 | `CACHE_ENABLED` | Включить кеширование | true |
